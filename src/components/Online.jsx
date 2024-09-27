@@ -43,11 +43,11 @@ const Online = () => {
     }, []);
 
 
-    const handleUserClicked = (userName) => {
-        if (me?.userName === userName) {
+    const handleUserClicked = (name) => {
+        if (me?.userName === name) {
             return;
         } else {
-            setSelectedUser((prev) => prev === null ? { userName:userName } : prev.userName = userName)
+            setSelectedUser({userName: name})
             if (window.innerWidth < 768 && showMembers) {
                 setShowMembers(!showMembers)
             }
