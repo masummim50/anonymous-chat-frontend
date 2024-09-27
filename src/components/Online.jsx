@@ -47,7 +47,7 @@ const Online = () => {
         if (me?.userName === userName) {
             return;
         } else {
-            setSelectedUser((prev) => prev === null ? { userName } : prev.userName = userName)
+            setSelectedUser((prev) => prev === null ? { userName:userName } : prev.userName = userName)
             if (window.innerWidth < 768 && showMembers) {
                 setShowMembers(!showMembers)
             }
